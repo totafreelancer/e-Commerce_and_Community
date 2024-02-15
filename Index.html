@@ -1,0 +1,1297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2 Project</title>
+
+    <!--=============== AOS ===============-->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <!--=============== google font ===============-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+
+    <!--=============== fontawesome ===============-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/fontawesome.min.css" integrity="sha512-cHxvm20nkjOUySu7jdwiUxgGy11vuVPE9YeK89geLMLMMEOcKFyS2i+8wo0FOwyQO/bL8Bvq1KMsqK4bbOsPnA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!--=============== bootstrap ===============-->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- ==================== CSS ==================== -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- <link rel="stylesheet" href="css/ii.css">
+    <link rel="stylesheet" href="css/jj.css"> -->
+
+
+</head>
+<body onscroll="changeBackground()">
+        <!-- ====================== Topbar ====================== -->
+ <div class="container">
+
+    <!-- ================ popup ========== -->
+    <div class="modal fad modal-dialog modal-dialog-centerede Watch_Video" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content video_popup">
+            <div class="modal-header">
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <iframe src="https://www.youtube.com/embed/zO8HPEK81e8?autoplay=1" class="y-video__media"></iframe>
+                <img src="img/bg/11.jpg" class="img-fluid" alt="...">
+                <a href="#" class="youtube">
+                    <span><i class="fa-brands fa-youtube"></i></span>
+                </a>
+            </div>
+          </div>
+        </div>
+    </div>
+
+
+    <!-- Modal -->
+
+    <section class="topbar d-none d-lg-block">
+        <div class="container d-flex justify-content-between align-item-center">
+            <div class="social_links">
+                <a target="_blank" href="#" class="facebook">
+                    <span><i class="fa-brands fa-facebook-f"></i></span>
+                </a>
+                <a target="_blank" href="#" class="twitter">
+                    <span><i class="fa-brands fa-twitter"></i></span>
+                </a>
+                <a target="_blank" href="#" class="youtube">
+                    <span><i class="fa-brands fa-youtube"></i></span>
+                </a>
+                <a target="_blank" href="#" class="linkedin">
+                    <span><i class="fa-brands fa-linkedin"></i></span>
+                </a>
+            </div>
+            <div class="social_links link">
+                <a href="login.html" class=""><i class="fas fa-sign-in-alt"></i> Member Login</a>
+                <span>|</span>
+                <a href="Member-Registration.html" class=""><i class="fa-regular fa-user"></i> To be a Member</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ====================== Header Mobile ====================== -->
+    <div class="Navder_bars">
+        <button class="navbar-toggler mobile-nav-toggle" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"><i class="fa-solid fa-bars"></i></span>
+        </button> 
+    </div>
+    <header id="headers" class="fixed-top d-flex align-items-center">
+        <div class="container navbar d-flex align-items-center container-fluid">
+            <div class="logo mr-lg-auto">
+                <a href="#" class="router-link-active"><img src="img/logo.png"></a>
+            </div>
+            <nav class="collapse mobile-nav d-lg-none"  id="navbarSupportedContent">
+                <div class="social-links d-flex justify-content-around">
+                    <a href="login.html" class=""><i class="bx bx-log-in"></i> Member Login</a> 
+                    <a>|</a> 
+                    <a href="Member-Registration.html" class="">To be a Member</a> 
+                    <a href="#"><i class="fa-solid fa-magnifying-glass"></i></a> <!---->
+                </div>
+                <ul style="    height: 100vh; overflow: hidden; overflow-y: scroll;">
+                    <li class="active"><a href="Index.html" class="router-link-active">Home</a></li>
+                    <li class="drop-down"><a href="#" onclick="About()" class="">About us <i class="fa-solid fa-chevron-down"></i></a>
+                        <ul id="drop-down-ul" class="md_None">
+                            <li class="drop-down dropdown">
+                                <a class="dropdown dropdown-toggle"href="#"role="button"data-bs-toggle="dropdown"aria-expanded="false">About e-Cab <i class="fa-solid fa-chevron-down"></i></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="Mission.html" class="">Mission</a></li>
+                                    <li><a href="Vision.html" class="">Vision</a></li>
+                                </ul>
+                            </li>
+                            <li class="drop-down dropdown"><a class="dropdown dropdown-toggle"href="#"role="button"data-bs-toggle="dropdown"aria-expanded="false">e-CAB  Committees <i class="fa-solid fa-chevron-down"></i></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="Advisory-council.html" class="">e-CAB Founders</a></li>
+                                    <li><a href="Advisory-council.html" class="">Advisory Council</a></li>
+                                    <li><a href="#" class="">Executive Committie (2022-2024)</a></li>
+                                    <li><a href="#" class="">Previous Executive Committee</a></li>
+                                    <li><a href="#" class="">Standing Commitee</a></li>
+                                    <li><a href="#" class="">e-CAB Youth Forums</a></li>
+                                    <li><a href="#" class="router-link-active">f-Commerce Alliance</a></li>
+                                </ul>
+                            </li>
+                            <li class=""><a href="#" class="">e-CAB Secretariat</a></li>
+                            <li class=""><a href="#" class="">Certifications</a></li>
+                        </ul>
+                    </li>
+                    <li class="drop-down dropdown"><a class="dropdown dropdown-toggle"href="#"role="button"data-bs-toggle="dropdown"aria-expanded="false">Membership <i class="fa-solid fa-chevron-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li class=""><a href="Membership.html" class="">Membership</a></li>
+                            <li class=""><a href="Member-list.html" class="">All Member</a></li>
+                            <li class=""><a href="Member-Registration.html" class="">Member Registration</a></li>
+                            <li class=""><a href="process-of-membership.html" class="">Process of Membership</a></li>
+                            <li class=""><a href="Benefits-of-members-1.html" class="">Benefits of Members</a></li>
+                            <li class=""><a href="Membership-rules.html" class="">Membership Rules</a></li>
+                            <li class=""><a href="Service-member.html" class="">Member Services</a></li>
+                        </ul>
+                    </li>
+                    <li class="drop-down dropdown"><a class="dropdown dropdown-toggle"href="#"role="button"data-bs-toggle="dropdown"aria-expanded="false">Media <i class="fa-solid fa-chevron-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li class=""><a href="CurrentNews.html" class="">Recent News</a></li>
+                            <li class=""><a href="Photo-gallery.html" class="">Photos Album</a></li>
+                            <li class=""><a href="Video-gallery.html" class="">Videos Album</a></li>
+                            <li class=""><a href="PressRelease.html" class="">Press Release</a></li>
+                        </ul>
+                    </li>
+                    <li class="drop-down dropdown"><a class="dropdown dropdown-toggle"href="#"role="button"data-bs-toggle="dropdown"aria-expanded="false">Materials <i class="fa-solid fa-chevron-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li class=""><a href="e-commerce.html" class="">e-Commerce Sector of Bangladesh</a></li>
+                            <li class=""><a href="Annual-report.html" class="">Annual Reports</a></li>
+                            <li class=""><a href="publication.html" class="">e-CAB Publications</a></li>
+                            <li class=""><a href="Policies.html" class="">Policies, Gadgets &amp; Law</a></li>
+                            <li class=""><a href="e-cab-election-2022-24.html" class="">e-CAB Election 2022-24</a></li>
+                        </ul>
+                    </li>
+                    <li class="drop-down dropdown"><a class="dropdown dropdown-toggle"href="#"role="button"data-bs-toggle="dropdown"aria-expanded="false">All Events <i class="fa-solid fa-chevron-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li class=""><a href="Events.html" class="">Events</a></li>
+                        </ul>
+                    </li>
+                    <li class=""><a href="contact.html" class="">Contact us</a></li>
+                    <li class=""><a href="Complain.html" class="">Complain</a></li>
+                    <li class=""><a href="Blog.html" class="">Blog</a></li>
+                    <li class="search__icon d-none d-lg-block"><a href="#"><i class="fa-solid fa-magnifying-glass"></i></a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- ====================== Header ====================== -->
+    <header id="header" class="fixed-top d-flex align-items-center">
+        <div class="container d-flex align-items-center container-fluid">
+            <div class="logo mr-lg-auto">
+                <a href="#" class="router-link-active"><img src="img/logo.png"></a>
+            </div>
+            <nav class="nav-menu d-none d-lg-block">
+                <ul>
+                    <li class="active"><a href="Index.html" class="router-link-active">Home</a></li>
+                    <li class="drop-down"><a href="About-e-cab-1.html" class="">About us <i class="fa-solid fa-chevron-down"></i></a>
+                        <ul>
+                            <li class="drop-down"><a href="About-e-cab-1.html" class="">About e-Cab <i class="fa-solid fa-angle-left"></i></a>
+                                <ul>
+                                    <li><a href="Mission.html" class="">Mission</a></li>
+                                    <li><a href="Vision.html" class="">Vision</a></li>
+                                </ul>
+                            </li>
+                            <li class="drop-down"><a href="Advisory-council.html" class="">e-CAB  Committees <i class="fa-solid fa-angle-left"></i></a>
+                                <ul>
+                                    <li><a href="Advisory-council.html" class="">e-CAB Founders</a></li>
+                                    <li><a href="Advisory-council.html" class="">Advisory Council</a></li>
+                                    <li><a href="#" class="">Executive Committie (2022-2024)</a></li>
+                                    <li><a href="#" class="">Previous Executive Committee</a></li>
+                                    <li><a href="#" class="">Standing Commitee</a></li>
+                                    <li><a href="#" class="">e-CAB Youth Forums</a></li>
+                                    <li><a href="#" class="router-link-active">f-Commerce Alliance</a></li>
+                                </ul>
+                            </li>
+                            <li class=""><a href="#" class="">e-CAB Secretariat</a></li>
+                            <li class=""><a href="#" class="">Certifications</a></li>
+                        </ul>
+                    </li>
+                    <li class="drop-down"><a href="Membership.html" class="">Membership <i class="fa-solid fa-chevron-down"></i></a>
+                        <ul>
+                            <li class=""><a href="Member-list.html" class="">All Member</a></li>
+                            <li class=""><a href="Member-Registration.html" class="">Member Registration</a></li>
+                            <li class=""><a href="process-of-membership.html" class="">Process of Membership</a></li>
+                            <li class=""><a href="Benefits-of-members-1.html" class="">Benefits of Members</a></li>
+                            <li class=""><a href="Membership-rules.html" class="">Membership Rules</a></li>
+                            <li class=""><a href="Service-member.html" class="">Member Services</a></li>
+                        </ul>
+                    </li>
+                    <li class="drop-down"><a href="CurrentNews.html" class="">Media <i class="fa-solid fa-chevron-down"></i></a>
+                        <ul>
+                            <li class=""><a href="CurrentNews.html" class="">Recent News</a></li>
+                            <li class=""><a href="Photo-gallery.html" class="">Photos Album</a></li>
+                            <li class=""><a href="Video-gallery.html" class="">Videos Album</a></li>
+                            <li class=""><a href="PressRelease.html" class="">Press Release</a></li>
+                        </ul>
+                    </li>
+                    <li class="drop-down"><a href="e-commerce.html" class="">Materials <i class="fa-solid fa-chevron-down"></i></a>
+                        <ul>
+                            <li class=""><a href="e-commerce.html" class="">e-Commerce Sector of Bangladesh</a></li>
+                            <li class=""><a href="Annual-report.html" class="">Annual Reports</a></li>
+                            <li class=""><a href="publication.html" class="">e-CAB Publications</a></li>
+                            <li class=""><a href="Policies.html" class="">Policies, Gadgets &amp; Law</a></li>
+                            <li class=""><a href="e-cab-election-2022-24.html" class="">e-CAB Election 2022-24</a></li>
+                        </ul>
+                    </li>
+                    <li class="drop-down"><a href="Events.html" class="">All Events <i class="fa-solid fa-chevron-down"></i></a>
+                        <ul>
+                            <li class=""><a href="Events.html" class="">Events</a></li>
+                        </ul>
+                    </li>
+                    <li class=""><a href="contact.html" class="">Contact us</a></li>
+                    <li class=""><a href="Complain.html" class="">Complain</a></li>
+                    <li class=""><a href="Blog.html" class="">Blog</a></li>
+                    <li class="search__icon d-none d-lg-block"><a href="#"><i class="fa-solid fa-magnifying-glass"></i></a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+
+
+        <main data-v-6c846f44 class="main">
+            <div>
+                <section id="hero" class="d-flex align-items-center position-relative">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-6 pt-5 pt-lg-0 order-2 order-lg-1 d-flex flex-column justify-content-center">
+                                <h1 data-aos="fade-up" class="pt-5 aos-init aos-animate">The Heart of e-Commerce and Community</h1>
+                                <p data-aos="fade-up" data-aos-delay="400" class="hero__sub__title mb-5 aos-init aos-animate"></p> 
+                                <div data-aos="fade-up" data-aos-delay="800" class="becomea-member-and-member mt-3 aos-init aos-animate">
+                                    <a href="Member-Registration.html" class="btn-get-started pulse">Member Registration
+                                        <i class="fa-solid fa-caret-right move-animated fs-5"></i>
+                                    </a> 
+                                    <p class="trusted__members text-color">
+                                        <img src="https://e-cab.net/public/web/img/vector/value.svg" alt=""> <span class="total-member"> 1964</span> + Trusted members E-commerce
+					                </p>
+                                </div>
+                            </div> 
+                            <div class="col-lg-6 order-1 order-lg-2 hero-img" style="position: relative;">
+                                <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="false">
+                                    <div class="carousel-indicators">
+                                      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                                      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                                      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                                    </div>
+                                    <div class="carousel-inner">
+                                      <div class="carousel-item active">
+                                        <img src="img/carousel/1649322239274687396_n.jpg" class="d-block w-100" alt="...">
+                                      </div>
+                                      <div class="carousel-item">
+                                        <img src="img/carousel/1658908080bbb.jpg" class="d-block w-100" alt="...">
+                                      </div>
+                                      <div class="carousel-item">
+                                        <img src="img/carousel/1658908762aaa.jpg" class="d-block w-100" alt="...">
+                                      </div>
+                                    </div>
+                                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                                      <span aria-hidden="true" class="carousel-control-prev-icon"><i class="fa-solid fa-chevron-left"></i></span>
+                                      <span class="visually-hidden">Previous</span>
+                                    </button>
+                                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                                      <span class="carousel-control-next-icon" aria-hidden="true"><i class="fa-solid fa-chevron-right"></i></span>
+                                      <span class="visually-hidden">Next</span>
+                                    </button>
+                                </div>
+                                <div class="video__player">
+                                    <a href="javascript:void (0)">
+                                        <div class="video__iocn d-block">
+                                            <a type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                                <i class="fa-brands fa-youtube"></i>
+                                            </a>
+                                            
+                                        </div> 
+                                        <h6>Watch Video</h6>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div> 
+                    <span class="shape"></span> <!---->
+                </section>
+
+                <div class="col-12 bag-img">
+                    <div class="col-lg-8 col-sm-12 m-auto text-center">
+                        <a href="http://e-cab.net/picnic">
+                            <img src="img/bg/63fcbc431690fPicnic Banner .png" alt="" class="banner-add" style="width: 520px; height: auto;">
+                        </a>
+                    </div>
+                </div>
+
+                <section id="counts" class="counts position-relative pb-5 section-circle-shape">
+                    <div class="container">
+                        <div class="about-header col-lg-6">
+                            <h2>About us</h2> 
+                            <div class="text-justify">
+                                Since inception 2015 e-Commerce Association of 
+                                Bangladesh (e-CAB) has been spreading e-Commerce all over the country to 
+                                build a nationwide networking as well as encouraging the country&amp;rsquo;s e-Commerce 
+                                entrepreneurs and online consumers to transfor...
+                            </div>
+                        </div> 
+                        <div class="row custom-about-img">
+                            <div data-aos="fade-right" data-aos-delay="150" class="image col-lg-6 aos-init">
+                                <img src="img/bg/60966cb8e78dalogo (1).png" width="450px" class="img-fluid about-img">
+                            </div> 
+                            <div data-aos="fade-left" data-aos-delay="300" class="col-lg-6 pt-4 pt-xl-0 custom-about aos-init">
+                                <div class="about-contents">
+                                    <div id="mission">
+                                        <h2 class="my-3">Mission</h2> <!----> 
+                                        <div class="text-justify">
+                                            <p>To provide a common platform for discussing and exchanging views on business
+                                                 conditions and issues, both domestic and international, affecting companies
+                                                of organizations involved with e-commerce or online marketplaces through which
+                                                trade is facilitated or commenced.&nbsp;
+                                            </p>
+                                        </div>
+                                    </div> 
+                                    <div id="vision">
+                                        <h2 class="my-3">Vision</h2> <!----> 
+                                        <div class="text-justify">
+                                            <p>Make E-commerce a driving force of the economic growth of Bangladesh through 
+                                            improving the E-commerce sector.
+                                            &nbsp;
+                                            To provide a common platform for discussing and exchanging 
+                                            views on business conditions and issues, both domestic and international, affecting companies or organizations involved with E-commerce or online marketplaces through which trade is facilitated or commenced.
+                                            To facilitate a higher success rate for member co...</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="member__benefits section-circle-shape-right">
+                    <div class="container">
+                        <div class="row">
+                            <div data-aos="fade-right" data-aos-delay="150" class="col-md-5">
+                                <h2 class="my-5 ml-lg-5">Benefits of Members</h2> 
+                                <div class="benefit-list aos-init aos-animate">
+                                    <p>1. Opportunely to stay connected in the business domain by Networking</p>
+
+                                    <p>2. Members will enjoy extra benefits to the e-CAB seminars, workshops etc.</p>
+                    
+                                    <p>3. Members will get advice and assistance in e-business.</p>
+                    
+                                    <p>4. E-Cab will put extra focus on promoting young entrepreneurs.</p>
+                    
+                                    <p>5. Members will get a chance to contribute and advise in the national policymaking.</p>
+                    
+                                    <p>6. Members will get various facilities for payment gateway services.</p>
+                    
+                                    <p>7. Members will get added facilitation for product delivery.</p>
+                    
+                                    <p>8. Members will get consultation and facilitation on SME &nbsp;loan for business growth.</p>
+                    
+                                    <p>9. Members will get support on digital marketing, web development, SEO etc.</p>
+                    
+                                    <p>10. E-Cab will work round the </p>
+                                </div> 
+                                <div class="col-md-7 ms-4 mt-4">
+                                    <a href="Benefits-of-members-1.html" class="btn btn-primary aos-init" data-aos="fade-up" data-aos-delay="150">Read more..</a>
+                                </div>
+                            </div> 
+                            <div class="col-md-7 mt-5" style="position: relative;">
+                                <h2 class="text-center">Latest Members</h2> 
+                                <div class="content content-box2 pl-lg-4">
+                                    <div data-aos="zoom-in" data-aos-delay="150" class="curcle-box aos-init aos-animate">
+                                        <img src="img/bg/60966cb8e78dalogo (1).png" alt=""> 
+                                        <span style="color: rgb(255, 255, 255);">Total Member<br> <b>1964</b></span>
+                                    </div> 
+                                    <ul class="circle-container">
+                                        <li>
+                                            <a href="Newpaze.html" target="_blank" title="Jamdani Lovers">
+                                                <div data-aos="zoom-in" data-aos-delay="150" class="user__box last-member aos-init aos-animate">
+                                                    <div class="member-logo">
+                                                        <img src="img/logo/1673954899easyheba.png" alt=""> 
+                                                        <span>ID-1983</span>
+                                                    </div> 
+                                                    <h5>Jamdani Lovers...</h5> 
+                                                    <span class="last-member-text">Last Member</span>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="Newpaze.html" target="_blank" title="Luxurybazarbd.com">
+                                                <div data-aos="zoom-in" data-aos-delay="150" class="user__box aos-init aos-animate">
+                                                    <div class="member-logo">
+                                                        <img src="img/logo/167588628073202875_472024350076363_6604729991152271360_n.jpg" alt=""> <span>ID-1982</span>
+                                                    </div> 
+                                                    <h5>Luxurybazarbd.c...</h5> <!---->
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="Newpaze.html" target="_blank" title="Aladin365.com">
+                                                <div data-aos="zoom-in" data-aos-delay="150" class="user__box aos-init aos-animate">
+                                                    <div class="member-logo">
+                                                        <img src="img/logo/1676357289WhatsApp Image 2023-02-10 at 3.45.00 PM.jpeg" alt=""> <span>ID-1981</span>
+                                                    </div> 
+                                                    <h5>Aladin365.com...</h5> <!---->
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="Newpaze.html" target="_blank" title="EasySheba Platform">
+                                                <div data-aos="zoom-in" data-aos-delay="150" class="user__box aos-init aos-animate">
+                                                    <div class="member-logo">
+                                                        <img src="img/logo/1676618420Stygen-Logo.png" alt=""> <span>ID-1980</span>
+                                                    </div> 
+                                                    <h5>EasySheba Platf...</h5> <!---->
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="Newpaze.html" target="_blank" title="Trustified Express">
+                                                <div data-aos="zoom-in" data-aos-delay="150" class="user__box aos-init aos-animate">
+                                                    <div class="member-logo">
+                                                        <img src="img/logo/1676725333Trustified-Express-LOGO.png" alt=""> <span>ID-1979</span>
+                                                    </div> 
+                                                    <h5>Trustified Expr...</h5> <!---->
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="Newpaze.html" target="_blank" title="Mehendi By Mimi">
+                                                <div data-aos="zoom-in" data-aos-delay="150" class="user__box aos-init aos-animate">
+                                                    <div class="member-logo">
+                                                        <img src="img/logo/1677488555Luxurybazar logo.jpg" alt=""> <span>ID-1978</span>
+                                                    </div> 
+                                                    <h5>Mehendi By Mimi...</h5> <!---->
+                                                </div>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="services" class="services">
+                    <div class="container">
+                        <div class="row my-5">
+                            <div class="col-lg-12">
+                                <h1 class="text-center">Our Services</h1>
+                            </div>
+                        </div> 
+                        <div class="row">
+                            <div data-aos="fade-up" data-aos-delay="600" class="col-lg-3 mb-4 aos-init aos-animate">
+                                <div class="service-card">
+                                    <a href="About-committees.html" class="">
+                                        <img src="img/bg/1.jpg" alt=""> 
+                                        <p class="card-text">e-CAB Membership</p>
+                                    </a>
+                                </div>
+                            </div>
+                            <div data-aos="fade-up" data-aos-delay="600" class="col-lg-3 mb-4 aos-init aos-animate">
+                                <div class="service-card">
+                                    <a href="About-committees.html" class="">
+                                        <img src="img/bg/2.png" alt=""> 
+                                        <p class="card-text">Co-Brand Prepaid Card</p>
+                                    </a>
+                                </div>
+                            </div>
+                            <div data-aos="fade-up" data-aos-delay="600" class="col-lg-3 mb-4 aos-init aos-animate">
+                                <div class="service-card">
+                                    <a href="process-of-membership.html" class="">
+                                        <img src="img/bg/3.jpg" alt=""> 
+                                        <p class="card-text">e-CAB &amp; IBBL Dual Currency VISA Prepaid Card</p>
+                                    </a>
+                                </div>
+                            </div>
+                            <div data-aos="fade-up" data-aos-delay="600" class="col-lg-3 mb-4 aos-init aos-animate">
+                                <div class="service-card">
+                                    <a href="About-committees.html" class="">
+                                        <img src="img/bg/1.jpg" alt=""> 
+                                        <p class="card-text">e-CAB Membership</p>
+                                    </a>
+                                </div>
+                            </div>
+                            <div data-aos="fade-up" data-aos-delay="600" class="col-lg-3 mb-4 aos-init aos-animate">
+                                <div class="service-card">
+                                    <a href="About-committees.html" class="">
+                                        <img src="img/bg/2.png" alt=""> 
+                                        <p class="card-text">Co-Brand Prepaid Card</p>
+                                    </a>
+                                </div>
+                            </div>
+                            <div data-aos="fade-up" data-aos-delay="600" class="col-lg-3 mb-4 aos-init aos-animate">
+                                <div class="service-card">
+                                    <a href="process-of-membership.html" class="">
+                                        <img src="img/bg/3.jpg" alt=""> 
+                                        <p class="card-text">e-CAB &amp; IBBL Dual Currency VISA Prepaid Card</p>
+                                    </a>
+                                </div>
+                            </div>
+                            <div data-aos="fade-up" data-aos-delay="600" class="col-lg-3 mb-4 aos-init aos-animate">
+                                <div class="service-card">
+                                    <a href="Benefits-of-members-1.html" class="">
+                                        <img src="img/bg/4.png" alt=""> 
+                                        <p class="card-text">Workshop and Training</p>
+                                    </a>
+                                </div>
+                            </div>
+                            <div data-aos="fade-up" data-aos-delay="600" class="col-lg-3 mb-4 aos-init">
+                                <div class="service-card">
+                                    <a href="Benefits-of-members-1.html" class="">
+                                        <img src="img/bg/5.png" alt="">
+                                        <p class="card-text">e-Cab Privilege Card</p>
+                                    </a>
+                                </div>
+                            </div>
+                        </div> 
+                        <div class="d-flex align-items-center justify-content-center mt-5">
+                            <a href="Service-member.html" class="btn btn-primary">More Service</a>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="news" class="news section-bg section-circle-shape">
+                    <div class="row my-5">
+                        <div class="col-lg-12 ecab_events">
+                            <h2>Our Events</h2>
+                        </div>
+                    </div> 
+                    <div class="container">
+                        <div class="row">
+                            <div data-aos="fade-up" data-aos-delay="200" class="col-lg-4 mb-3 aos-init aos-animate">
+                                <div class="card event__card shadow-lg" style="height: 533px;"><!----> 
+                                    <img alt="..." src="img/bg/6.png" lazy="loaded"> 
+                                    <div class="card-body news-card-shadow">
+                                        <div class="news-bottom-text d-flex justify-content-between mb-1">
+                                            <p><i class="icofont-ui-calendar"></i>15th Apr to</p> 
+                                            <p><i class="icofont-google-map"></i>Mohakhali</p>
+                                        </div> 
+                                        <h5 class="card-title">e-CAB Iftar 2022</h5> 
+                                        <p class="card-text"></p> 
+                                        <div class="d-flex align-items-center justify-content-center">
+                                            <a href="CurrentNews.html" class="btn btn-primary mb-2 mt-2 news-btn view-event-details">View Details</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div data-aos="fade-up" data-aos-delay="200" class="col-lg-4 mb-3 aos-init aos-animate">
+                                <div class="card event__card shadow-lg" style="height: 533px;"><!----> 
+                                    <img alt="..." src="img/bg/7.png" lazy="loaded"> 
+                                    <div class="card-body news-card-shadow">
+                                        <div class="news-bottom-text d-flex justify-content-between mb-1">
+                                            <p><i class="icofont-ui-calendar"></i>Feb to 22nd Feb 2022</p> 
+                                            <p><i class="icofont-google-map"></i>Agargaon</p>
+                                        </div> 
+                                        <h5 class="card-title">e-CAB 7th Annual General Meeting</h5> 
+                                        <p class="card-text"></p> 
+                                        <div class="d-flex align-items-center justify-content-center">
+                                            <a href="CurrentNews.html" class="btn btn-primary mb-2 mt-2 news-btn view-event-details">View Details</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div> 
+                            <div data-aos="fade-up" data-aos-delay="200" class="col-lg-4 mb-3 aos-init aos-animate">
+                                <div class="card event__card shadow-lg" style="height: 533px;"><!----> 
+                                    <img alt="..." src="img/bg/6.png" lazy="loaded"> 
+                                    <div class="card-body news-card-shadow">
+                                        <div class="news-bottom-text d-flex justify-content-between mb-1">
+                                            <p><i class="icofont-ui-calendar"></i>15th Apr to</p> 
+                                            <p><i class="icofont-google-map"></i>Mohakhali</p>
+                                        </div> 
+                                        <h5 class="card-title">e-CAB Iftar 2022</h5> 
+                                        <p class="card-text"></p> 
+                                        <div class="d-flex align-items-center justify-content-center">
+                                            <a href="CurrentNews.html" class="btn btn-primary mb-2 mt-2 news-btn view-event-details">View Details</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- <div data-aos="fade-up" data-aos-delay="200" class="col-lg-4 ml-auto event__calendar aos-init aos-animate">
+                                <div class="eventCalendar">
+                                    <div class="card calender-card shadow-lg">
+                                        <div class="__vev_calendar-wrapper">
+                                            <div class="cal-wrapper">
+                                                <div class="calendar-container">
+                                                    <header>
+                                                        <span class="shape"></span> 
+                                                        <div class="content-header"></div>
+                                                        <div class="">
+                                                            <div class="d-flex">
+                                                                <div class="day">02</div> 
+                                                                <div class="month">March</div> 
+                                                                <div class="year">2023</div>
+                                                            </div>
+                                                        </div>
+                                                    </header>
+                                                </div>
+                                                <div class="cal-header">
+                                                    <div class="l">
+                                                        <div class="arrow-left icon">&nbsp;</div>
+                                                    </div> 
+                                                    <div class="title" style="display: none;">03/2023</div> 
+                                                    <div class="r">
+                                                        <div class="arrow-right icon">&nbsp;</div>
+                                                    </div>
+                                                </div> 
+                                                <div class="cal-body calendar-body">
+                                                    <div class="weeks">
+                                                        <span class="item">Sun</span>
+                                                        <span class="item">Mon</span>
+                                                        <span class="item">Tue</span>
+                                                        <span class="item">Wed</span>
+                                                        <span class="item">Thu</span>
+                                                        <span class="item">Fri</span>
+                                                        <span class="item">Sat</span>
+                                                    </div> 
+                                                    <div class="dates">
+                                                        <div class="item">
+                                                            <p class="date-num" style="color: rgb(242, 149, 67);">&nbsp;</p> 
+                                                        </div>
+                                                        <div class="item">
+                                                            <p class="date-num" style="color: rgb(242, 149, 67);">&nbsp;</p> 
+                                                        </div>
+                                                        <div class="item">
+                                                            <p class="date-num" style="color: rgb(242, 149, 67);">&nbsp;</p>
+                                                        </div>
+                                                        <div class="item event">
+                                                            <p class="date-num" style="color: rgb(242, 149, 67);">1</p> 
+                                                            <span class="is-event" style="border-color: rgb(242, 149, 67); background-color: inherit;"></span>
+                                                        </div>
+                                                        <div class="item today event"><p class="date-num" style="color: rgb(242, 149, 67);">2</p> 
+                                                            <span class="is-today" style="background-color: rgb(242, 149, 67);"></span> 
+                                                            <span class="is-event" style="border-color: rgb(242, 149, 67); background-color: inherit;"></span>
+                                                        </div>
+                                                        <div class="item event">
+                                                            <p class="date-num" style="color: rgb(242, 149, 67);">3</p> 
+                                                            <span class="is-event" style="border-color: rgb(242, 149, 67); background-color: inherit;"></span>
+                                                        </div>
+                                                        <div class="item">
+                                                            <p class="date-num" style="color: inherit;">4</p>
+                                                        </div>
+                                                        <div class="item">
+                                                            <p class="date-num" style="color: inherit;">5</p> 
+                                                        </div>
+                                                        <div class="item">
+                                                            <p class="date-num" style="color: inherit;">6</p>
+                                                        </div>
+                                                        <div class="item">
+                                                            <p class="date-num" style="color: inherit;">7</p>
+                                                        </div>
+                                                        <div class="item">
+                                                            <p class="date-num" style="color: inherit;">8</p> 
+                                                        </div>
+                                                        <div class="item">
+                                                            <p class="date-num" style="color: inherit;">9</p>
+                                                        </div>
+                                                        <div class="item">
+                                                            <p class="date-num" style="color: inherit;">10</p>
+                                                        </div>
+                                                        <div class="item">
+                                                            <p class="date-num" style="color: inherit;">11</p> 
+                                                        </div>
+                                                        <div class="item">
+                                                            <p class="date-num" style="color: inherit;">13</p>
+                                                        </div>
+                                                        <div class="item">
+                                                            <p class="date-num" style="color: inherit;">14</p>
+                                                        </div>
+                                                        <div class="item">
+                                                            <p class="date-num" style="color: inherit;">15</p>
+                                                        </div>
+                                                        <div class="item">
+                                                            <p class="date-num" style="color: inherit;">16</p>
+                                                        </div>
+                                                        <div class="item">
+                                                            <p class="date-num" style="color: inherit;">17</p> 
+                                                        </div>
+                                                        <div class="item">
+                                                            <p class="date-num" style="color: inherit;">18</p>
+                                                        </div><div class="item">
+                                                            <p class="date-num" style="color: inherit;">19</p> 
+                                                        </div>
+                                                        <div class="item">
+                                                            <p class="date-num" style="color: inherit;">20</p> 
+                                                        </div>
+                                                        <div class="item">
+                                                            <p class="date-num" style="color: inherit;">21</p>
+                                                        </div>
+                                                        <div class="item">
+                                                            <p class="date-num" style="color: inherit;">&nbsp;</p>
+                                                        </div>
+                                                        <div class="item">
+                                                            <p class="date-num" style="color: inherit;">&nbsp;</p>
+                                                        </div>
+                                                        <div class="item">
+                                                            <p class="date-num" style="color: inherit;">&nbsp;</p>
+                                                        </div>
+                                                        <div class="item">
+                                                            <p class="date-num" style="color: inherit;">&nbsp;</p>
+                                                        </div>
+                                                        <div class="item">
+                                                            <p class="date-num" style="color: inherit;">&nbsp;</p>
+                                                        </div>
+                                                        <div class="item"><p class="date-num" style="color: inherit;">&nbsp;</p>
+                                                        </div>
+                                                        <div class="item">
+                                                            <p class="date-num" style="color: inherit;">&nbsp;</p> 
+                                                        </div>
+                                                        <div class="item">
+                                                            <p class="date-num" style="color: inherit;">&nbsp;</p> 
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div> 
+                                            <div class="events-wrapper" style="background-color: rgb(242, 149, 67);">
+                                                <h2 class="date">All Events</h2> 
+                                                <div class="cal-events">
+                                                    <div class="event-item">
+                                                        <div class="wrapper">
+                                                            <h3 class="title">1. jjj/event</h3> 
+                                                            <p class="time">03/01/2023</p> 
+                                                            <p class="desc"></p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="event-item">
+                                                        <div class="wrapper">
+                                                            <h3 class="title">2. e-cab-iftar-2022/event</h3> 
+                                                            <p class="time">15/04/2022</p> 
+                                                            <p class="desc"></p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="event-item">
+                                                        <div class="wrapper">
+                                                            <h3 class="title">3. e-cab-iftar-2022/event</h3> 
+                                                            <p class="time">16/04/2022</p> 
+                                                            <p class="desc"></p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="event-item">
+                                                        <div class="wrapper">
+                                                            <h3 class="title">4. e-cab-iftar-2022/event</h3> 
+                                                            <p class="time">17/04/2022</p> 
+                                                            <p class="desc"></p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="event-item">
+                                                        <div class="wrapper">
+                                                            <h3 class="title">5. e-cab-iftar-2022/event</h3> 
+                                                            <p class="time">18/04/2022</p> 
+                                                            <p class="desc"></p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="event-item">
+                                                        <div class="wrapper">
+                                                            <h3 class="title">323. e-cab-iftar-2022/event</h3> 
+                                                            <p class="time">02/03/2023</p> 
+                                                            <p class="desc"></p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="event-item">
+                                                        <div class="wrapper">
+                                                            <h3 class="title">324. e-cab-iftar-2022/event</h3> 
+                                                            <p class="time">03/03/2023</p> <p class="desc"></p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="event-item">
+                                                        <div class="wrapper">
+                                                            <h3 class="title">325. e-cab-7th-annual-general-meeting-1/event</h3> 
+                                                            <p class="time">22/02/2022</p> 
+                                                            <p class="desc"></p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="event-item">
+                                                        <div class="wrapper">
+                                                            <h3 class="title">326. e-cab-annual-general-meeting-1/event</h3> 
+                                                            <p class="time">16/10/2021</p> 
+                                                            <p class="desc"></p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="event-item">
+                                                        <div class="wrapper">
+                                                            <h3 class="title">327. e-commerce-policy-talk/event</h3> 
+                                                            <p class="time">15/10/2021</p> 
+                                                            <p class="desc"></p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div> 
+                                        <div class="calander-button">
+                                            <a href="/ea/events" class="btn btn-primary pt-2">All Events</a>
+                                        </div> 
+                                        <div id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" class="modal fade">
+                                            <div role="document" class="modal-dialog">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <h5 id="exampleModalLabel" class="modal-title">Events Information</h5> 
+                                                        <button type="button" data-dismiss="modal" aria-label="Close" class="close">
+                                                            <span aria-hidden="true">×</span>
+                                                        </button>
+                                                    </div> 
+                                                    <div class="modal-body"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div> -->
+                        </div>
+                    </div>
+                </section>
+
+                <div class="col-12">
+                    <div class="col-lg-8 col-sm-12 m-auto text-center">
+                        <a>
+                            <img src="img/bg/63fcbc431690fPicnic Banner .png" alt="" class="banner-add" style="width: 520px; height: auto;">
+                        </a>
+                    </div>
+                </div>
+
+                <section id="features" class="features">
+                    <div class="container">
+                        <h1 class="my-5">Update News</h1> 
+                        <div class="row">
+                            <div class="col-lg-7 d-flex" style="position: relative;">
+                                <div class="update-news-main">
+                                    <img src="img/bg/11.jpg" width="600px" alt="" class="rounded">
+                                </div> 
+                                <div class="update-news-contents"><p>3rd Aug</p> 
+                                    <h3 class="mb-4">
+                                        <a href="E-clab.html" class="" style="color: rgb(255, 255, 255); font-size: 28px;">বঙ্গবন্ধুর সমাধিতে ই-ক্যাব নতুন নেতৃত্বের শ্রদ্ধা</a>
+                                    </h3>
+                                </div>
+                            </div> 
+                            <div class="col-lg-4">
+                                <div class="update-news-side"><!---->
+                                    <div class="side-news-1 mb-2 d-flex">
+                                        <a href="E-clab.html" class="">
+                                            <div class="d-flex">
+                                                <img src="img/bg/12.jpg" width="108px" alt="" class="rouned me-3"> 
+                                                <div class="update-news-side">
+                                                    <h6>ই-ক্যাবের ইফতার ও দোয়া মাহফিল অনুষ্ঠিত</h6> <p>15th Apr</p>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="side-news-1 mb-2 d-flex">
+                                        <a href="E-clab.html" class="">
+                                            <div class="d-flex">
+                                                <img src="img/bg/13.jpg" width="108px" alt="" class="rouned me-3"> 
+                                                <div class="update-news-side">
+                                                    <h6>ই-ক্যাব এনবিআর যৌথ সভা</h6> <p>16th Feb</p>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="side-news-1 mb-2 d-flex">
+                                        <a href="E-clab.html" class="">
+                                            <div class="d-flex">
+                                                <img src="img/bg/14.jpg" width="108px" alt="" class="rouned me-3"> 
+                                                <div class="update-news-side">
+                                                    <h6>ই-কমার্স পলিসি টক এড্রেসিং ফোর্থ ইন্ডাস্ট্রিয়াল রেভুলেশন</h6> <p>16th Nov</p>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="side-news-1 mb-2 d-flex">
+                                        <a href="E-clab.html" class="">
+                                            <div class="d-flex">
+                                                <img src="img/bg/15.jpg" width="108px" alt="" class="rouned me-3"> 
+                                                <div class="update-news-side">
+                                                    <h6>ই-কমার্স উদ্যোক্তাদের আয়কর বিষয়ে মত বিনিময় সভা</h6> <p>15th Oct</p>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div> 
+                                    <a href="Member-list.html" class="btn btn-primary mt-5">More News</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="portfolio" class="portfolio section-circle-shape">
+                    <div class="container">
+                        <div data-aos="fade-up" class="gallery-title text-center my-5 aos-init aos-animate">
+                            <h2 >Our Gallery</h2>
+                        </div> 
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <ul id="portfolio-flters">
+                                    <li onclick="All_pf()" class="All_pf filter-active">All</li> 
+                                    <li onclick="Photos_pf()" class="Photos_pf">Photos</li> 
+                                    <li onclick="Videos_pf()" class="Videos_pf">Videos</li>
+                                </ul>
+                            </div> 
+                            <div class="col-md-12 Our_Gallery">
+                                <div class="row">
+                                    <div id="E_portfolio_photo" class="col-lg-4 col-md-6 col-6 portfolio-item">
+                                        <div class="portfolio-wrap">
+                                            <div class="overly"></div> 
+                                            <img alt="photo" src="img/bg/11.jpg"> 
+                                            <div class="portfolio-info">
+                                                <a href="Photo-gallery.html" class="" title="More Details">
+                                                    <h4 >e-Commerce fair in Jessore - 2020</h4>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div id="E_portfolio_photo" class="col-lg-4 col-md-6 col-6 portfolio-item">
+                                        <div class="portfolio-wrap">
+                                            <div class="overly"></div> 
+                                            <img alt="photo" src="img/bg/12.jpg"> 
+                                            <div class="portfolio-info">
+                                                <a href="Photo-gallery.html" class="" title="More Details">
+                                                    <h4>e-CAB 5th year &amp; 1000 Member Celebration Program 2019</h4>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div id="E_portfolio_photo" class="col-lg-4 col-md-6 col-6 portfolio-item">
+                                        <div class="portfolio-wrap">
+                                            <div class="overly"></div> 
+                                            <img alt="photo" src="img/bg/13.jpg" src="img/bg/13.jpg"> 
+                                            <div class="portfolio-info">
+                                                <a href="Photo-gallery.html" class="" title="More Details">
+                                                    <h4>e-CAB Picnic 2020</h4>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div id="E_portfolio_video" class="col-lg-4 col-md-6 col-6 portfolio-item">
+                                        <div class="portfolio-wrap">
+                                            <div class="y-video">
+                                                <div class="videoss">
+                                                    <video src="v/medusa.mp4" type="dideo/mp4" muted></video>
+                                                    <button class="y-video__button">
+                                                        <i class="fa-brands fa-youtube"></i>
+                                                    </button>
+                                                </div>
+                                                <div class="click_videos">
+                                                    <video src="v/medusa.mp4" controls></video>
+                                                </div>
+                                            </div> 
+                                        </div>
+                                    </div>
+                                    <div id="E_portfolio_video" class="col-lg-4 col-md-6 col-6 portfolio-item">
+                                        <div class="portfolio-wrap">
+                                            <div class="y-video">
+                                                <div class="videoss">
+                                                    <video src="v/medusa.mp4" type="dideo/mp4" muted></video>
+                                                    <button class="y-video__button">
+                                                        <i class="fa-brands fa-youtube"></i>
+                                                    </button>
+                                                </div>
+                                                <div class="click_videos">
+                                                    <video src="v/medusa.mp4" controls></video>
+                                                </div>
+                                            </div> 
+                                        </div>
+                                    </div>
+                                </div>
+                            </div> 
+                            <div class="col-md-12">
+                                <div class="gallery-btn d-flex justify-content-center align-items-center my-3">
+                                    <a href="Photo-gallery.html" class="btn btn-primary">View All Photos</a> 
+                                    <a href="Video-gallery.html" class="btn btn-primary ms-3">View All Videos</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="team" class="team section-bg section-circle-shape">
+                    <div class="container">
+                        <div data-aos="fade-up" class="team-title my-5 aos-init aos-animate">
+                            <h2 class="text-dark text-center">Executive Committee</h2>
+                        </div> 
+                        <div class="col-md-10 m-auto">
+                            <div class="row">
+                                <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+                                    <div data-aos="fade-up" class="member w-100 aos-init aos-animate">
+                                        <div class="member-img">
+                                            <img alt="Shomi Kaisers No image" class="img-fluid" src="img/bg/20.jpeg" lazy="loaded"> 
+                                            <div class="social">
+                                                <a target="_blank"><i class="fa-brands fa-facebook-f"></i></a> 
+                                                <a target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                                            </div>
+                                        </div> 
+                                        <div class="member-info"><h4>Shomi Kaiser</h4> <span>President</span></div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+                                    <div  data-aos="fade-up" class="member w-100 aos-init aos-animate">
+                                        <div class="member-img">
+                                            <img alt="Mohammad Sahab Uddins No image" class="img-fluid" src="img/bg/21.jpeg" lazy="loaded"> 
+                                            <div class="social">
+                                                <a target="_blank"><i class="fa-brands fa-facebook-f"></i></a> 
+                                                <a target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                                            </div>
+                                        </div> 
+                                        <div class="member-info"><h4>Mohammad Sahab Uddin</h4> <span>Vice President</span></div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+                                    <div  data-aos="fade-up" class="member w-100 aos-init aos-animate">
+                                        <div class="member-img">
+                                            <img alt="Mohammad Sahab Uddins No image" class="img-fluid" src="img/bg/22.jpeg" lazy="loaded"> 
+                                            <div class="social">
+                                                <a target="_blank"><i class="fa-brands fa-facebook-f"></i></a> 
+                                                <a target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                                            </div>
+                                        </div> 
+                                        <div class="member-info">
+                                            <h4>Muhammad Abdul Wahed Tomal</h4> <span>General Secretary</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+                                    <div data-aos="fade-up" class="member w-100 aos-init aos-animate">
+                                        <div class="member-img">
+                                            <img alt="Shomi Kaisers No image" class="img-fluid" src="img/bg/20.jpeg" lazy="loaded"> 
+                                            <div class="social">
+                                                <a target="_blank"><i class="fa-brands fa-facebook-f"></i></a> 
+                                                <a target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                                            </div>
+                                        </div> 
+                                        <div class="member-info"><h4>Shomi Kaiser</h4> <span>President</span></div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+                                    <div data-aos="fade-up" class="member w-100 aos-init aos-animate">
+                                        <div class="member-img">
+                                            <img alt="Mohammad Sahab Uddins No image" class="img-fluid" src="img/bg/21.jpeg" lazy="loaded"> 
+                                            <div class="social">
+                                                <a target="_blank"><i class="fa-brands fa-facebook-f"></i></a> 
+                                                <a target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                                            </div>
+                                        </div> 
+                                        <div class="member-info"><h4>Mohammad Sahab Uddin</h4> <span>Vice President</span></div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+                                    <div data-aos="fade-up" class="member w-100 aos-init aos-animate">
+                                        <div class="member-img">
+                                            <img alt="Mohammad Sahab Uddins No image" class="img-fluid" src="img/bg/22.jpeg" lazy="loaded"> 
+                                            <div class="social">
+                                                <a target="_blank"><i class="fa-brands fa-facebook-f"></i></a> 
+                                                <a target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                                            </div>
+                                        </div> 
+                                        <div class="member-info">
+                                            <h4>Muhammad Abdul Wahed Tomal</h4> <span>General Secretary</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="member-counter">
+                    <div data-v-5e52a2e2="" class="bx-shape1">
+                        <img src="img/bg/18.png" alt="">
+                    </div> 
+                    <div class="container">
+                        <div class="col-md-10 m-auto">
+                            <div class="row">
+                                <div class="col-md-8">
+                                    <h6 class="trusted-heading">Apply to be a<br> <b >MEMBER</b></h6>
+                                </div> 
+                                <div class="col-lg-4">
+                                    <div class="count-box text-center text-lg-left ">
+                                        <a href="Member-Registration.html" class="btn btn-apply-now">APPLY NOW</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div> 
+                    <div class="bx-shape2">
+                        <img src="img/bg/18.png" alt="">
+                    </div>
+                </section>
+
+                <section class="partners bobble-shape-right">
+                    <div class="container">
+                        <div class="row">
+                            <div data-aos="fade-up" data-aos-delay="200" class="col-md-12 d-flex justify-content-center align-items-center">
+                                <h2 class="text-dark text-center">Our Partners</h2>
+                            </div> 
+                            <div data-aos="fade-up" data-aos-delay="400" class="col-md-12">
+                                <div class="our-partners-card-rightside">
+                                    <div class="our-partners mt-5 text-center">
+                                        <a target="_blank"><img alt="" src="https://e-cab.net/public/images/pertner/61606feabdc3cmanobsheba.jpg" lazy="loaded"></a>
+                                        <a target="_blank"><img alt="" src="https://e-cab.net/public/images/pertner/61606fda273dflict.jpg" lazy="loaded"></a>
+                                        <a target="_blank"><img alt="" src="https://e-cab.net/public/images/pertner/61606fc03af0cfbcci.jpg" lazy="loaded"></a>
+                                        <a target="_blank"><img alt="" src="https://e-cab.net/public/images/pertner/61607134b6612ekshop.jpg" lazy="loaded"></a>
+                                        <a target="_blank"><img alt="" src="https://e-cab.net/public/images/pertner/61606f820c2e5bpc.jpg" lazy="loaded"></a>
+                                        <a target="_blank"><img alt="" src="https://e-cab.net/public/images/pertner/61606f40ddd3ca2i.jpg" lazy="loaded"></a>
+                                        <a target="_blank"><img alt="" src="https://e-cab.net/public/images/pertner/61606f1d08c08Hitech.jpg" lazy="loaded"></a>
+                                        <a target="_blank"><img alt="" src="https://e-cab.net/public/images/pertner/61606ecf36c4bICT.jpg" lazy="loaded"></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="blog-section pb-5">
+                    <div class="row my-5">
+                        <div class="col-lg-12 blog-title d-flex justify-content-between">
+                            <h2>Blog</h2> <a href="/blog" class="">View all</a>
+                        </div>
+                    </div> 
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-4 mb-4">
+                                <div class="card card-shadow">
+                                    <img src="img/bg/26.jpg" alt="..." class="card-img-top rounded"> 
+                                    <div class="card-body">
+                                        <div class="blog-publisher-info d-flex justify-content-between">
+                                            <div class="avatar-image">
+                                                <img src="https://e-cab.net/images/avatar.png" alt="">
+                                            </div> 
+                                            <div class="avatar-info">
+                                                <h6><span>Jahangir Alam Shovon</span></h6> <p>Oct 6, 2021</p>
+                                            </div> 
+                                            <div class="avatar-icon">
+                                                <i class="fa-regular fa-bookmark"></i>
+                                            </div>
+                                        </div>
+                                        <h5 class="card-title">সক্রো সম্পর্কে আপনার যা জানা প্রয়োজন</h5> 
+                                        <p class="card-text">Shake Your Business</p> 
+                                        <a href="Blog.html" class="btn btn-primary">View Details</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4 mb-4">
+                                <div class="card card-shadow">
+                                    <img src="img/bg/25.jpeg" alt="..." class="card-img-top rounded"> 
+                                    <div class="card-body">
+                                        <div class="blog-publisher-info d-flex justify-content-between">
+                                            <div class="avatar-image">
+                                                <img src="https://e-cab.net/images/avatar.png" alt="">
+                                            </div> 
+                                            <div class="avatar-info">
+                                                <h6><span>Jahangir Alam Shovon</span></h6> <p>Oct 6, 2021</p>
+                                            </div> 
+                                            <div class="avatar-icon">
+                                                <i class="fa-regular fa-bookmark"></i>
+                                            </div>
+                                        </div>
+                                        <h5 class="card-title">সক্রো সম্পর্কে আপনার যা জানা প্রয়োজন</h5> 
+                                        <p class="card-text">Shake Your Business</p> 
+                                        <a href="Blog.html" class="btn btn-primary">View Details</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4 mb-4">
+                                <div class="card card-shadow">
+                                    <img src="img/bg/26.jpg" alt="..." class="card-img-top rounded"> 
+                                    <div class="card-body">
+                                        <div class="blog-publisher-info d-flex justify-content-between">
+                                            <div class="avatar-image">
+                                                <img src="https://e-cab.net/images/avatar.png" alt="">
+                                            </div> 
+                                            <div class="avatar-info">
+                                                <h6><span>Jahangir Alam Shovon</span></h6> <p>Aug 29, 2021</p>
+                                            </div> 
+                                            <div class="avatar-icon">
+                                                <i class="fa-regular fa-bookmark"></i>
+                                            </div>
+                                        </div> 
+                                        <h5 class="card-title">ই-কমার্সে অনিয়ম ও অভিযুক্ত প্রতিষ্ঠান বিষয়ে ই-ক্যাবের পদক্ষেপ </h5> 
+                                        <p class="card-text">বর্তমান পরিস্থিতি সংক্রান্ত বিষয়ে ই-ক্যাবের গৃহিত পদক্ষেপ দীর্ঘদিন ধরে বিভিন্ন ই-কমার্স কোম্পানী নিয়ে&nbsp; ক্রেতা ও সরবরাহকা</p> 
+                                        <a href="Blog.html" class="btn btn-primary">View Details</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <a href="#" class="back-to-top" style="display: inline;">
+                    <i class="fa-sharp fa-solid fa-chevron-up"></i>
+                </a>
+
+                
+
+            </div>
+        </main>
+
+        <footer id="footer">
+            <div class="footer-top">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-3 col-md-6 footer-info">
+                            <img src="img/logo.png" alt=""> <br> <br> <p></p> 
+                            <p><span>e-Commerce Association of Bangladesh. (e-CAB)</span> 
+                                <span>House-4, (1st floor) Block-B, Road-23/A, (Near Biddaniketon School) Banani,&nbsp;Dhaka-1213,</span>
+                            </p> 
+                            <div class="contact mt-4">
+                                <div class="social-links">
+                                    <a href="#" class="twitter"><span><i class="fa-brands fa-facebook-f"></i></span></a>
+                                    <a href="#" class="twitter"><span><i class="fa-brands fa-twitter"></i></span></a>
+                                    <a href="#" class="twitter"><span><i class="fa-brands fa-youtube"></i></span></a>
+                                    <a href="#" class="twitter"><span><i class="fa-brands fa-linkedin"></i></span></a>
+                                </div>
+                            </div>
+                        </div> 
+                        <div class="col-lg-2 mt-2 col-md-6 footer-links"> 
+                            <h4>Useful Links</h4> 
+                            <ul>
+                                <li><a href="#" class="">About Us</a></li>
+                                <li><a href="#" class="">Services</a></li>
+                                <li><a href="#" class="">Terms &amp; Conditions</a></li> 
+                                <li><a href="/blog" class="">Blog</a></li>
+                            </ul>
+                        </div> 
+                        <div class="col-lg-3 mt-2 col-md-6 footer-links"><h4>Our Services</h4> 
+                            <ul>
+                                <li><a href="#" class=""><p class="card-text">e-CAB Membership</p></a></li>
+                                <li><a href="#" class=""><p class="card-text">Co-Brand Prepaid Card</p></a></li>
+                                <li><a href="#" class=""><p class="card-text">e-CAB &amp; IBBL Dual Currency VISA Prepaid Card</p></a></li>
+                                <li><a href="#" class=""><p class="card-text">Workshop and Training</p></a></li>
+                                <li><a href="#" class=""><p class="card-text">e-Cab Privilege Card</p></a></li>
+                            </ul>
+                        </div>
+                        <div class="col-lg-4 mt-2 col-md-6 footer-newsletter">
+                            <span class="shape10"></span> 
+                            <h4>Our Newsletter</h4> <p class="mb-3">Subscribe For Daily Latest News &amp; Updates</p> 
+                            <form class="position-relative">
+                                <input type="email" name="email"> 
+                                <input type="submit" value="Subscribe"><br> <!---->
+                            </form> <br> <br> <h4>We Accept</h4> 
+                            <div class="row justify-content-center">
+                                <img width="380" height="190" src="img/bg/pay_image.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> 
+            <div class="container border-top pt-4">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="copyright">© Copyright<strong><span class="text-white">e-CAB</span></strong>. All Rights Reserved</div>
+                    </div> 
+                    <div class="col-md-6 ms-auto">
+                        <div class="credits text-white">Designed &amp; Developed By
+                            <a href="#" target="_blank" class="text-white"><b> Nogor Solutions Limited </b></a>&amp;
+                            <a href="#" target="_blank" class="text-white"><b class="m-0"> TechKnowGram Limited </b></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+
+    </div>
+
+        
+        
+
+
+
+
+
+
+
+    <!--=============== bootstrap ===============-->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!--=============== JS ===============-->
+    <script src="js/JS.js"></script>
+
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+
+</body>
+</html>
